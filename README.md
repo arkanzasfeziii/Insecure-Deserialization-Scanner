@@ -5,16 +5,8 @@
 [![Security Tool](https://img.shields.io/badge/Security-Vulnerability_Scanner-red)](https://owasp.org/www-community/vulnerabilities/Deserialization_of_untrusted_data)
 
 > ⚠️ **Ethical Use Only**: This tool is designed for **authorized security testing**. Never scan systems without explicit written permission. Unauthorized scanning may violate computer crime laws.
-> 
+
 Advanced automated vulnerability detection tool that identifies insecure deserialization vulnerabilities across 7+ programming languages and frameworks.
-╔══════════════════════════════════════════════════════════════════╗
-║                                                                  ║
-║          Insecure Deserialization Scanner v2.0.0                 ║
-║         Advanced Vulnerability Detection Framework               ║
-║                                                                  ║
-║         Detecting Unsafe Deserialization Patterns                ║
-║                     arkanzasfeziii                               ║
-╚══════════════════════════════════════════════════════════════════╝
 
 ## ✨ Key Features
 - 🔎 **Multi-Language Support**: Python, Java, PHP, .NET, Ruby, Node.js, XML
@@ -45,21 +37,21 @@ Advanced automated vulnerability detection tool that identifies insecure deseria
 git clone https://github.com/yourusername/insecure-deserialization-scanner.git
 cd insecure-deserialization-scanner
 ```
-# Install dependencies
+Install dependencies
 ```pip install -r requirements.txt```
-# Optional: Install full dependencies for all features
+Optional: Install full dependencies for all features
 ```pip install requests termcolor pyyaml scapy```
 
-Basic Usage
-# Interactive easy mode (recommended for beginners)
+#Basic Usage
+Interactive easy mode (recommended for beginners)
 ```python scanner.py --easy```
-# Scan source code directory
+Scan source code directory
 ```python scanner.py --target /path/to/project --mode static```
-# Test live web application
+Test live web application
 ```python scanner.py --target https://example.com/api --mode dynamic```
-# Analyze suspicious serialized file
+Analyze suspicious serialized file
 ```python scanner.py --target malicious.pkl --mode full```
-# Generate HTML report
+Generate HTML report
 ```python scanner.py --target /path/to/code --output-html report.html```
 
 📋 Example Output
@@ -103,7 +95,7 @@ Total Issues Found: 3
     ✅ Fix Recommendation:
        Validate file source or use SQLite instead.
 
-📂 Supported Formats & Signatures
+#📂 Supported Formats & Signatures
 Format     ,File Extensions                       ,Magic Bytes
 Python      Pickle,.pkl",".pickle,                \x80\x03", "\x80\x04
 Java        Serialized,.ser",".serialized,        \xac\xed\x00\x05
@@ -111,35 +103,35 @@ PHP         Serialized,.php,                      O:", "a:
 .NET        BinaryFormatter,.dat,                 AAEAAAD (Base64)
 YAML        (unsafe),.yaml", ".yml,               !!python/object
 
-⚙️ Advanced Usage
-# Full scan with all detection methods
+#⚙️ Advanced Usage
+Full scan with all detection methods
 ```python scanner.py --target /path/to/app --mode full --verbose```
-# Scan specific language only
+Scan specific language only
 ```python scanner.py --target src/ --type python --mode static```
-# Test with custom HTTP method
+Test with custom HTTP method
 ```python scanner.py --target https://api.example.com --method GET --mode dynamic```
-# Generate both JSON and HTML reports
+Generate both JSON and HTML reports
 ```python scanner.py --target project/ --output-json report.json --output-html report.html```
 
-📜 Requirements
-# Core dependencies
+#📜 Requirements
+Core dependencies
 requests>=2.28.0
 termcolor>=2.0.0
 pyyaml>=6.0
 
-# Optional (for PCAP analysis)
+Optional (for PCAP analysis)
 scapy>=2.4.5
 
-# Python 3.7+
+Python 3.7+
 
-⚠️ Legal Disclaimer
+#⚠️ Legal Disclaimer
 This tool is provided strictly for authorized security testing purposes. The authors assume no liability for misuse. You are solely responsible for ensuring you have explicit written permission before scanning any system. Unauthorized scanning may violate:
 Computer Fraud and Abuse Act (CFAA)
 GDPR Article 32 (security testing without consent)
 Local computer crime laws in your jurisdiction
 Never use this tool against systems you do not own or have explicit written authorization to test.
 
-🌐 References
+#🌐 References
 OWASP: Deserialization of Untrusted Data
 CWE-502: Deserialization of Untrusted Data
 PHP Object Injection
