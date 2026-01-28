@@ -126,8 +126,10 @@ YAML        (unsafe),.yaml", ".yml,               !!python/object
 requests>=2.28.0
 termcolor>=2.0.0
 pyyaml>=6.0
+
 # Optional (for PCAP analysis)
 scapy>=2.4.5
+
 # Python 3.7+
 
 ⚠️ Legal Disclaimer
