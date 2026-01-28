@@ -37,21 +37,27 @@ Advanced automated vulnerability detection tool that identifies insecure deseria
 git clone https://github.com/yourusername/insecure-deserialization-scanner.git
 cd insecure-deserialization-scanner
 ```
-Install dependencies
+#Install dependencies
 ```pip install -r requirements.txt```
-Optional: Install full dependencies for all features
+
+#Optional: Install full dependencies for all features
 ```pip install requests termcolor pyyaml scapy```
 
-#Basic Usage
-Interactive easy mode (recommended for beginners)
+###Basic Usage
+
+#Interactive easy mode (recommended for beginners)
 ```python scanner.py --easy```
-Scan source code directory
+
+#Scan source code directory
 ```python scanner.py --target /path/to/project --mode static```
-Test live web application
+
+#Test live web application
 ```python scanner.py --target https://example.com/api --mode dynamic```
-Analyze suspicious serialized file
+
+#Analyze suspicious serialized file
 ```python scanner.py --target malicious.pkl --mode full```
-Generate HTML report
+
+#Generate HTML report
 ```python scanner.py --target /path/to/code --output-html report.html```
 
 📋 Example Output
@@ -103,14 +109,17 @@ PHP         Serialized,.php,                      O:", "a:
 .NET        BinaryFormatter,.dat,                 AAEAAAD (Base64)
 YAML        (unsafe),.yaml", ".yml,               !!python/object
 
-#⚙️ Advanced Usage
-Full scan with all detection methods
+###⚙️ Advanced Usage
+#Full scan with all detection methods
 ```python scanner.py --target /path/to/app --mode full --verbose```
-Scan specific language only
+
+#Scan specific language only
 ```python scanner.py --target src/ --type python --mode static```
-Test with custom HTTP method
+
+#Test with custom HTTP method
 ```python scanner.py --target https://api.example.com --method GET --mode dynamic```
-Generate both JSON and HTML reports
+
+#Generate both JSON and HTML reports
 ```python scanner.py --target project/ --output-json report.json --output-html report.html```
 
 #📜 Requirements
